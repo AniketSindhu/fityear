@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
       title: "FitYear",
       home: Intro(),
       debugShowCheckedModeBanner: false,
-
     );
   }
 }

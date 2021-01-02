@@ -1,5 +1,7 @@
+import 'package:fityear/UI/pages/homepage.dart';
 import "package:flutter/material.dart";
 import 'package:fityear/data/data.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Intro extends StatefulWidget {
   @override
@@ -86,7 +88,7 @@ class _HomeState extends State<Intro> {
             ),
             Row(
               children: <Widget>[
-                for(int i=0;i<sliderList.length;i++)curInd==i ?curpagehghlght(true):curpagehghlght(false),
+                for(int i=0;i<sliderList.length;i++)curInd==i ?curpagehghlght(true).px8():curpagehghlght(false).px8(),
               ],
             ),
             InkWell(
@@ -105,7 +107,7 @@ class _HomeState extends State<Intro> {
       ):
       InkWell(
         onTap: (){
-          //Join here to the log In page ;
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
         },
         child:Container(
           margin: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
@@ -149,7 +151,7 @@ class SliderPart extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          Text(desc,textAlign: TextAlign.center,style:TextStyle(fontSize:18.0,fontWeight: FontWeight.w400),),
+          Text(desc,textAlign: TextAlign.center,style:TextStyle(fontSize:18.0,fontWeight: FontWeight.w400),).px16(),
         ],
       ),
     );
