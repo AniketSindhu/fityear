@@ -105,7 +105,7 @@ class _HomeState extends State<Intro> {
       ):
       InkWell(
         onTap: (){
-          print("Clcked");
+          //Join here to the log In page ;
         },
         child:Container(
           margin: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
