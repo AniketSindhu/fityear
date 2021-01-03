@@ -3,6 +3,7 @@ import 'package:fityear/Methods/Firebase/firebaseAdd.dart';
 import 'package:fityear/Methods/Functions/isUserexist.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -27,5 +28,7 @@ Future<bool> signInWithGoogle() async {
   if(!newUser){
     adduser(user.uid, user.displayName ,user.photoURL, user.email);
   }
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setBool('login', true);
   return true;
 }

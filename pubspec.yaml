@@ -30,6 +30,7 @@ dependencies:
   firebase_core: "0.5.3"
   firebase_auth: "^0.18.4+1"
   pedometer: ^2.0.2
+  shared_preferences: ^0.5.12+4
   flutter:
     sdk: flutter
 
