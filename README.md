@@ -30,6 +30,7 @@ Leaderboard                |  Login              |  Intro
 ## Created & Maintained By
 
 - [Aniket Sindhu](https://github.com/AniketSindhu) ([Twitter](https://www.twitter.com/aniketsindhu1))
+- [Saumya Ranjan Nayak](https://github.com/saumya66) ([LinkedIn](https://www.linkedin.com/in/saumya-ranjan-nayak-30ba7a187/))
 - [Himanshu Raj](https://github.com/himanshu211raj) ([Twitter](https://twitter.com/himanshu211raj))
 - [Saurav chaudhary](https://github.com/LetmeDesign) ([LinkedIn](https://www.linkedin.com/in/saurav-chaudhary-7ba682177/))
 
