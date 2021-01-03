@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:fityear/Methods/Functions/getUser.dart';
 import 'package:fityear/Methods/Functions/logout.dart';
+import 'package:fityear/Models/lvlModel.dart';
 import 'package:fityear/Models/userModel.dart';
+import 'package:fityear/UI/pages/leaderboard.dart';
 import 'package:fityear/UI/pages/loginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -18,8 +20,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   UserModel user;
+  Level level;
+  int steps = 0;
   void getUserNow() async {
     user = await getUser();
+    setState(() {});
+  }
+
+  void getLevel() {
+    level = Level(steps);
     setState(() {});
   }
 
@@ -27,20 +36,22 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     getUserNow();
+    getLevel();
     initPlatformState();
   }
 
   @override
   Widget build(BuildContext context) {
+    print(level.steps/level.milestone);
     return Scaffold(
-      body: Plasma(
-        particles: 10,
-        foregroundColor: Color(0xd61e0000),
-        backgroundColor: Color(0xff0d2cee),
-        size: 0.87,
-        speed: 3.92,
-        offset: 0.00,
-        blendMode: BlendMode.darken,
+      body: level!=null?Plasma(
+        particles: level.particles,
+        foregroundColor: level.foregroundColor,
+        backgroundColor: level.backgroundColor,
+        size: level.size,
+        speed: level.speed,
+        offset: level.offset,
+        blendMode: level.blendMode,
         child: ZStack([
           Lottie.asset('assets/fireworks.json',
                   repeat: false, fit: BoxFit.cover)
@@ -97,25 +108,31 @@ class _HomePageState extends State<HomePage> {
                   CircularPercentIndicator(
                     radius: 250.0,
                     lineWidth: 18.0,
-                    percent: 0.7,
+                    percent: steps/level.milestone,
                     backgroundColor: Colors.white,
                     center: Column(
                       children: [
-                        CircleAvatar(
-                          radius: 65,
-                          backgroundColor: Colors.transparent,
-                          child: user == null || user.image == null
-                              ? Image.asset(
-                                  'assets/no_image.png',
-                                  fit: BoxFit.fill,
-                                )
-                              : Image.network(
-                                  user.image,
-                                  fit: BoxFit.cover,
-                                ),
-                        ).centered(),
+                        InkWell(
+                          onDoubleTap: (){
+                            getLevel();
+                            steps= steps + 1000;
+                          },
+                          child: CircleAvatar(
+                            radius: 65,
+                            backgroundColor: Colors.transparent,
+                            child: user == null || user.image == null
+                                ? Image.asset(
+                                    'assets/no_image.png',
+                                    fit: BoxFit.fill,
+                                  )
+                                : Image.network(
+                                    user.image,
+                                    fit: BoxFit.cover,
+                                  ),
+                          ).centered(),
+                        ),
                         10.heightBox,
-                        "Normie"
+                        level.name
                             .text
                             .color(Color(0xFFB283F0))
                             .size(22)
@@ -127,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                     progressColor: Color(0xff0CFDCA),
                   ).centered(),
                   10.heightBox,
-                  _steps.text.extraBold.size(60).white.makeCentered(),
+                  steps.text.extraBold.size(60).white.makeCentered(),
                   "Steps"
                       .text
                       .medium
@@ -138,21 +155,26 @@ class _HomePageState extends State<HomePage> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
               ).expand(),
-              "Leaderboard"
-                  .text
-                  .underline
-                  .red500
-                  .size(22)
-                  .medium
-                  .make()
-                  .objectBottomCenter()
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Leaderboard()));
+                },
+                child: "Leaderboard"
+                    .text
+                    .underline
+                    .red500
+                    .size(22)
+                    .medium
+                    .make()
+                    .objectBottomCenter(),
+              )
             ],
             alignment: MainAxisAlignment.start,
             crossAlignment: CrossAxisAlignment.center,
             axisSize: MainAxisSize.max,
           ).py24(),
         ]),
-      ),
+      ):CircularProgressIndicator().centered(),
     );
   }
 
