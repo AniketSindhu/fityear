@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fityear/UI/pages/intro_screens.dart';
 import 'package:velocity_x/velocity_x.dart';
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {

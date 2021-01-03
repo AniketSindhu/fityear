@@ -24,7 +24,7 @@ Future<bool> signInWithGoogle() async {
 
   final User user = userCredential.user;
   final newUser = await isUserExist(user.uid);
-  if(newUser){
+  if(!newUser){
     adduser(user.uid, user.displayName ,user.photoURL, user.email);
   }
   return true;

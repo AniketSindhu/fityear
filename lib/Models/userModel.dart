@@ -12,7 +12,7 @@ class UserModel{
     return UserModel(
       email: doc['email'],
       name: doc['name'],
-      image: doc['image'],
+      image: doc['imageUrl'],
       uid: doc['uid']
     );
   }

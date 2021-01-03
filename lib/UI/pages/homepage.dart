@@ -1,3 +1,7 @@
+import 'package:fityear/Methods/Functions/getUser.dart';
+import 'package:fityear/Methods/Functions/logout.dart';
+import 'package:fityear/Models/userModel.dart';
+import 'package:fityear/UI/pages/loginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -10,6 +14,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  UserModel user;
+  void getUserNow() async{
+    user = await getUser();
+    setState(() {});
+  }
+  @override
+  void initState(){
+    super.initState();
+    getUserNow();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +54,11 @@ class _HomePageState extends State<HomePage> {
               ),
               5.heightBox,
               "236 days remaining".text.medium.size(16).color(Color(0xFFFDB10C)).make().centered(),
+              5.heightBox,
+              IconButton(icon: Icon(Icons.logout),color: Colors.red, onPressed:()async{
+                await logout();
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login()));
+              },iconSize: 30,splashColor: Colors.red),
               Column(
                 children: [
                   CircularPercentIndicator(
@@ -51,8 +70,8 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           CircleAvatar(
                             radius: 65,
-                            backgroundColor: Colors.red,
-                            child: Image.asset('assets/no_image.png',fit: BoxFit.fill,),
+                            backgroundColor: Colors.transparent,
+                            child: user==null||user.image==null?Image.asset('assets/no_image.png',fit: BoxFit.fill,):Image.network(user.image,fit: BoxFit.cover,),
                           ).centered(),
                           10.heightBox,
                           "Normie".text.color(Color(0xFFB283F0)).size(22).bold.make()

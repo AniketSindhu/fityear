@@ -1,4 +1,5 @@
 import 'package:fityear/UI/pages/homepage.dart';
+import 'package:fityear/UI/pages/loginScreen.dart';
 import "package:flutter/material.dart";
 import 'package:fityear/data/data.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -107,7 +108,7 @@ class _HomeState extends State<Intro> {
       ):
       InkWell(
         onTap: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login()));
         },
         child:Container(
           margin: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
