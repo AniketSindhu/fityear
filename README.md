@@ -25,3 +25,17 @@ Bronze                |  Silver              | Gold                |  Platnium
 Leaderboard                |  Login              |  Intro              
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676097.png) |![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676102.png)|![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609678268.png)
+
+
+## Created & Maintained By
+
+- [Aniket Sindhu](https://github.com/AniketSindhu) ([Twitter](https://www.twitter.com/aniketsindhu1))
+- [Himanshu Raj](https://github.com/himanshu211raj) ([Twitter](https://twitter.com/himanshu211raj))
+
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/ftyear/count.svg" alt ="Loading">
+
+
+
