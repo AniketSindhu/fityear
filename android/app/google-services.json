@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "976359207814",
+    "project_id": "mlh-new-year",
+    "storage_bucket": "mlh-new-year.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976359207814:android:802bc0c1865eb7f6963207",
+        "android_client_info": {
+          "package_name": "com.example.fityear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976359207814-525sfuvd3i9usb33g8hrce182j038ble.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fityear",
+            "certificate_hash": "3e757356bc630beb82922b8f55eca683efbdc53c"
+          }
+        },
+        {
+          "client_id": "976359207814-gn1r3vq361ebk1bgerl2uefaeq6afk79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBQIKO_b5JnRKKe_GW6fz-w6yADPI_eoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976359207814-gn1r3vq361ebk1bgerl2uefaeq6afk79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

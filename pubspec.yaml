@@ -25,6 +25,10 @@ dependencies:
   lottie: ^0.7.0+1
   simple_animations: ^2.4.2
   percent_indicator: "^2.1.7+2"
+  google_sign_in: "^4.5.1"
+  cloud_firestore: "^0.14.4"
+  firebase_core: "0.5.3"
+  firebase_auth: "^0.18.4+1"
   flutter:
     sdk: flutter
 
