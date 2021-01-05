@@ -13,4 +13,31 @@ Counting steps using the pedometer was quite a challenge.
 ## Accomplishments that I'm proud of
 That we were able to complete it in such a less time with good UI.
 
+## Try it out
+https://drive.google.com/file/d/1iczPCdFjuZXPHFkOdHXJeUyGYW76TBRP/view?usp=sharing
+
+## Screenshots
+Bronze                |  Silver              | Gold                |  Platnium
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676044.png) |![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676055.png)|![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676073.png)|![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676092.png)|
+
+
+Leaderboard                |  Login              |  Intro              
+:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676097.png) |![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609676102.png)|![](https://github.com/AniketSindhu/fityear/blob/master/images/Screenshot_1609678268.png)
+
+
+## Created & Maintained By
+
+- [Aniket Sindhu](https://github.com/AniketSindhu) ([Twitter](https://www.twitter.com/aniketsindhu1))
+- [Saumya Ranjan Nayak](https://github.com/saumya66) ([LinkedIn](https://www.linkedin.com/in/saumya-ranjan-nayak-30ba7a187/))
+- [Himanshu Raj](https://github.com/himanshu211raj) ([Twitter](https://twitter.com/himanshu211raj))
+- [Saurav chaudhary](https://github.com/LetmeDesign) ([LinkedIn](https://www.linkedin.com/in/saurav-chaudhary-7ba682177/))
+
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/ftyear/count.svg" alt ="Loading">
+
+
 
